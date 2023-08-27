@@ -1,0 +1,102 @@
+.cup-container{
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 1.2rem;
+}
+
+.cupImage{
+    width: 150px;
+    height: 150px;
+}
+
+.text-container{
+    color: white;
+    text-align: center;
+}
+.text-container h1{
+    font-size: 4.3rem;
+    letter-spacing: 0.5rem;
+    font-weight: 600;
+}
+.text-container p{
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+}
+
+.playBtn-container{
+    text-align: center;
+    margin-top: 3rem;
+}
+.playBtn{
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    width: 140px;
+    padding: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    color: #6B6B6B;
+}
+
+.stars-container{
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+}
+.star:nth-child(1){
+    position: relative;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+}
+.star:nth-child(2){
+    position: relative;
+    left: -20px;
+    top: -80px;
+    width: 50px;
+    height: 50px;
+}
+.star:nth-child(3){
+    position: relative;
+    left: -40px;
+    top: -140px;
+    width: 25px;
+    height: 25px;
+}
+.star:nth-child(4){
+    position: relative;
+    left: 0px;
+    top: -115px;
+    width: 25px;
+    height: 25px;
+}
+.star:nth-child(5){
+    position: relative;
+    left: 55px;
+    top: -95px;
+    width: 70px;
+    height: 70px;
+}
+.star:nth-child(6){
+    position: relative;
+    left: 70px;
+    top: -75px;
+    width: 25px;
+    height: 25px;
+}
+.star:nth-child(7){
+    position: relative;
+    left: -10px;
+    top: 40px;
+    width: 90px;
+    height: 90px;
+}
+.star:nth-child(8){
+    position: relative;
+    left: -300px;
+    top: 50px;
+    width: 25px;
+    height: 25px;
+}

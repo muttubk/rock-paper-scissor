@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="main-container">
+        <!-- SCORE AREA -->
+        <div class="score-area">
+            <div class="score-area-text">
+                <p>ROCK<br>PAPER<br>SCISSORS</p>
+            </div>
+            <div class="score-container">
+                <div class="computer">
+                    <p>COMPUTER<br>SCORE</p>
+                    <h1 class="computer-score">0</h1>
+                </div>
+                <div class="user">
+                    <p>YOUR<br>SCORE</p>
+                    <h1 class="user-score">0</h1>
+                </div>
+            </div>
+        </div>
+        <!-- PLAY AREA CONTAINER-->
+        <div class="play-area-container">
+            <!-- PLAY AREA -->
+            <div class="play-area">
+                <div class="line one"></div>
+                <div class="line two"></div>
+                <div class="line three"></div>
+                <div class="choiceBtns">
+                    <div class="choiceBtn-container rock"><button class="choiceBtn" onclick="play('rock')"><img src="./assets/rock.png" alt=""></button></div>
+                    <div class="choiceBtn-container scissor"><button class="choiceBtn" onclick="play('scissor')"><img src="./assets/scissor.png" alt=""></button></div>
+                </div>
+                <div class="choiceBtn-container paper"><button class="choiceBtn" onclick="play('paper')"><img src="./assets/paper.png" alt=""></button></div>
+            </div>
+            <!-- AFTER SELECTION BY USER -->
+            <div class="after-play">
+                <div class="user-choice">
+                    <p>YOU PICKED</p>
+                    <div class="choiceBtn-container"><button class="choiceBtn userBtn"><img src="" alt=""></button></div>
+                </div>
+                <div class="middle">
+                    <div class="status">
+                        <h1>YOU WIN</h1>
+                        <p>AGAINST PC</p>
+                    </div>
+                    <button class="playAgain" onclick="replay()">PLAY AGAIN</button>
+                </div>
+                <div class="pc-choice">
+                    <p>PC PICKED</p>
+                    <div class="choiceBtn-container"><button class="choiceBtn pcBtn"><img src="" alt=""></button></div>
+                </div>
+            </div>
+            <!-- <div class="playAgain-container"> -->
+                <!-- <button class="playAgain" onclick="replay()">PLAY AGAIN</button> -->
+            <!-- </div> -->
+        </div>
+        <!-- RULES and NEXT buttons --> 
+        <div class="bottom-btns">
+            <button class="rules">RULES</button>
+            <a href="./hurray.html"><button class="next">NEXT</button></a>
+        </div>
+        <div class="game-rules">
+            <button class="cancel-btn">X</button>
+            <h1>Game Rules</h1>
+            <ul class="rules-list">
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
