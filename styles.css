@@ -105,15 +105,27 @@ a{
 
 .game-rules ul{
     padding-left: 1.3rem;
-    list-style: square;
+    list-style: none;
     font-size: 0.7rem;
     font-weight: 300;
 }
-
-.game-rules li::marker{
-    color: #FFD600;
-    font-size: 1.5rem;
+.game-rules li{
+    position: relative;
+    padding: 6px 0;
 }
+.game-rules span{
+    content: '';
+    background: #FFD600;
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    left: -19px;
+    top: 16px;
+}
+/* .game-rules li::marker{
+    color: red;
+    font-size: 1.5rem;
+} */
 
 .cancel-btn{
     width: 50px;
@@ -161,7 +173,8 @@ a{
     background-color: white;
     border-radius: 50%;
     border: none;
-    background: radial-gradient(white 50%, #00000041);
+    box-shadow: inset 0em 0em 2em #00000041;
+    /* background: radial-gradient(white 50%, #00000041); */
 }
 .choiceBtn-container{
     border: 12px solid;
@@ -186,8 +199,9 @@ a{
 }
 
 .line{
-    border: 6px solid #000000A3;
+    height: 12px;
     width: 250px;
+    background: #000000A3;
     position: absolute;
 }
 .line.one{
