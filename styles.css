@@ -95,6 +95,15 @@ a{
     border-radius: 10px;
     display: none;
     z-index: 999;
+    animation: rulesPop 2s ease;
+}
+
+@keyframes rulesPop {
+    0%{
+        opacity: 0;
+        /* transform: scale(0.5); */
+        transform-origin: top right;
+    }
 }
 
 .game-rules h1{
@@ -234,10 +243,6 @@ a{
 }
 .status{
     color: white;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     text-align: center;
     z-index: 99;
 }
@@ -254,6 +259,7 @@ a{
 .user-choice, .pc-choice{
     position: relative;
     z-index: 99;
+    border-radius: 50%;
 }
 .user-choice p, .pc-choice p{
     color: white;
@@ -270,39 +276,35 @@ a{
     transform: translateX(14px);
 }
 
-.user-choice::before, .pc-choice::before{
-    content: '';
-    width: calc(2.4*124px);
-    height: calc(2.4*124px);
-    position: absolute; 
-    border-radius: 50%;
-    /* border: 30px solid green; */
-    background-color: #66b248;
-    z-index: -1;
-    transform: translate(-29%, -29%);
-    display: var(--displayValue, none);
+/* Winner celebration animation */
+.winnerShadow{
+    box-shadow: 0px 0px 0px 33px #279b27, 0px 0px 0px 60px #32a62f, 0px 0px 0px 86px #66B248, 0px 0px 62px 86px rgba(0, 0, 0, 0.13);
+    animation: shadowAnimation 2s ease;
 }
-.user-choice::after, .pc-choice::after{
+@keyframes shadowAnimation {
+    0%{
+        box-shadow: none;
+    }
+    100%{
+        box-shadow: 0px 0px 0px 33px #279b27, 0px 0px 0px 60px #32a62f, 0px 0px 0px 86px #66B248, 0px 0px 62px 86px rgba(0, 0, 0, 0.13)
+    }
+}
+
+/* .user-choice::after, .pc-choice::after{
     content: '';
     background: radial-gradient(#279b27 55%, #32a62f 0%);
     border-radius: 50%;
-    /* background-color: #2e9225a9; */
-    /* border: 20px solid #2E9A2563; */
     width: calc(2*124px);
     height: calc(2*124px);
     transform: translate(-25%, -75%);
     position: absolute;
     z-index: -1;
     display: var(--displayValue, none);
-}
+    box-shadow: 0px 0px 0px 25px #66B248, 0px 0px 62px 10px rgba(0, 0, 0, 0.13);
+} */
 
 
-/* .playAgain-container{ */
-    /* position: absolute; */
-    /* top: 100px; */
-    /* display: none; */
-/* } */
-
+/* PLAY AGAIN BUTTON */
 .playAgain{
     position: absolute;
     bottom: -20px;

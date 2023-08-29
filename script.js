@@ -3,9 +3,6 @@ let rules=document.getElementsByClassName('rules')[0]
 let gameRules=document.getElementsByClassName('game-rules')[0]
 let cancelBtn=document.getElementsByClassName('cancel-btn')[0]
 
-// HURRAY PLAY AGAIN BUTTON
-// let playBtn=document.getElementsByClassName('playBtn')[0]
-
 // getting user entered value
 let choiceBtn=document.getElementsByClassName('choiceBtn')[0]
 
@@ -58,12 +55,6 @@ rules.addEventListener('click', function(){
 cancelBtn.addEventListener('click', function(){
     gameRules.style.display='none';
 })
-
-// HURRAY PLAY AGAIN BUTTON
-// playBtn.addEventListener('click', function(){
-//     window.location.href='index.html'
-//     // playArea.style.display='flex'
-// })
 
 
 
@@ -130,13 +121,21 @@ function play(x){
 
     if(winner=='user'){
         nextBtn.style.display='block'
-        userWin.style.setProperty('--displayValue',  'block')
+        // Used to display ::after content
+        // userWin.style.setProperty('--displayValue',  'block')
+        //              OR
+        // Display shadow by adding 'shadow' class
+        userWin.classList.add('winnerShadow')
         statusText.innerHTML=`<h1>YOU WIN</h1><p>AGAINST PC</p>`
         a=1+Number(localStorage.getItem('score1'))
     }
     else if(winner=='pc'){
         nextBtn.style.display='none'
-        pcWin.style.setProperty('--displayValue', 'block')
+        // Used to display ::after content
+        // pcWin.style.setProperty('--displayValue', 'block')
+        //              OR
+        // display shadow by adding 'shadow' class
+        pcWin.classList.add('winnerShadow')
         statusText.innerHTML=`<h1>YOU LOST</h1><p>AGAINST PC</p>`
         b=1+Number(localStorage.getItem('score2'))
     }
@@ -162,9 +161,14 @@ function replay(){
     playAgainBtn.style.display='none'
     userClassList.setAttribute('class','choiceBtn-container')
     pcClassList.setAttribute('class', 'choiceBtn-container')
+    // On replay remove shadow style class
+    userWin.classList.remove('winnerShadow')
+    pcWin.classList.remove('winnerShadow')
     nextBtn.style.display='none'
-    userWin.style.setProperty('--displayValue',  'none')
-    pcWin.style.setProperty('--displayValue', 'none')
+    //              OR
+    // On replay remove the shadow,  ::after
+    // userWin.style.setProperty('--displayValue',  'none')
+    // pcWin.style.setProperty('--displayValue', 'none')
     playAgainBtn.innerHTML='PLAY AGAIN'
 }
 

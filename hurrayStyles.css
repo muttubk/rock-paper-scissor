@@ -100,3 +100,13 @@
     width: 25px;
     height: 25px;
 }
+
+.star{
+    animation: rotateStar 5s ease infinite;
+}
+
+@keyframes rotateStar {
+    50%{
+        transform: rotate(180deg);
+    }
+}
