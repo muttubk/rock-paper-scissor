@@ -32,7 +32,7 @@ let userScore=document.getElementsByClassName('user-score')[0]
 
 
 // Display current score at start
-setTimeout(function(){
+function updateScore(){
     let u=Number(localStorage.getItem('score1'))
     let pc=Number(localStorage.getItem('score2'))
     if(u=='NaN'){
@@ -45,7 +45,8 @@ setTimeout(function(){
     }else{
         computerScore.innerText=pc
     }
-}, 0)
+}
+updateScore()
 
 // RULES BUTTON FUNCTION
 rules.addEventListener('click', function(){
@@ -151,6 +152,7 @@ function play(x){
     userScore.innerText=p
     computerScore.innerText=q
     // console.log(a,b, p, q)
+    updateScore()
 }
 
 
