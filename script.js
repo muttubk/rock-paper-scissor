@@ -101,17 +101,10 @@ function winnerWho(x){
 function play(x){
     let a=Number(localStorage.getItem('score1'))
     let b=Number(localStorage.getItem('score2'))
-    if(a=='NaN'){
-        a=0
-        localStorage.setItem('score1', 0)
-    }
-    if(b=='NaN'){
-        b=0
-        localStorage.setItem('score2', 0)
-    }
 
     let [winner,computerChoice]=winnerWho(x)
     let icons=['rock', 'scissor', 'paper']
+    
     playArea.style.display='none'
     afterPlay.style.display='flex'
     playAgainBtn.style.display='block'
