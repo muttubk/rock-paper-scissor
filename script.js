@@ -31,6 +31,7 @@ let computerScore=document.getElementsByClassName('computer-score')[0]
 let userScore=document.getElementsByClassName('user-score')[0]
 
 // RULES BUTTON FUNCTION
+gameRules.style.display='none'
 rules.addEventListener('click', function(){
     gameRules.style.display='block';
 });
