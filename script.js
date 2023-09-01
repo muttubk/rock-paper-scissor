@@ -30,6 +30,14 @@ let playAgainBtn=document.getElementsByClassName('playAgain')[0]
 let computerScore=document.getElementsByClassName('computer-score')[0]
 let userScore=document.getElementsByClassName('user-score')[0]
 
+// RULES BUTTON FUNCTION
+rules.addEventListener('click', function(){
+    gameRules.style.display='block';
+});
+
+cancelBtn.addEventListener('click', function(){
+    gameRules.style.display='none';
+})
 
 // Display current score at start
 function updateScore(){
@@ -48,14 +56,6 @@ function updateScore(){
 }
 updateScore()
 
-// RULES BUTTON FUNCTION
-rules.addEventListener('click', function(){
-    gameRules.style.display='block';
-});
-
-cancelBtn.addEventListener('click', function(){
-    gameRules.style.display='none';
-})
 
 
 
